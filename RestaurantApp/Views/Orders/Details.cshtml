@@ -1,0 +1,66 @@
+﻿@model RestaurantApp.Models.DbModels.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CustomerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TableSeating.TableSeatingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TableSeating.TableSeatingId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Waiter.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Waiter.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

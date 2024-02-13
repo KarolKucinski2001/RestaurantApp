@@ -1,0 +1,15 @@
+﻿@model RestaurantApp.Models.DbModels.Waiter
+@{
+    ViewBag.Title = "View";
+}
+@Html.DisplayNameFor(model=>model.WaiterId)
+@Html.DisplayFor(model=>model.WaiterId)
+@Html.DisplayNameFor(model=>model.FirstName)
+@Html.DisplayFor(model=>model.FirstName)
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WaiterId}) |
+    @Html.ActionLink("Back to the list", "ViewAll")
+</p>
+
+

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RestaurantApp.Models.DbModels.TableSeating>
+
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<h2>ViewAll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Seats)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seats)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TableSeatingId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TableSeatingId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TableSeatingId })
+        </td>
+    </tr>
+}
+
+</table>
